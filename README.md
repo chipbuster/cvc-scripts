@@ -26,4 +26,23 @@ $SCRIPT_DIR/getTotalEnergy.sh protein.pdb
 ```
 
 In addition, many of the scripts are not well-suited for running from a folder
-other than the folder the input is in. This includes things like runSingles, runAmber, etc.
+other than the folder the input is in. This includes things like runSingles,
+runAmber, etc.
+
+## Minimum Required Programs for Protein Docking
+
+In order to run docking protocols, you will need at minimum for the following
+programs to be valid in `Makefile.def`:
+
+  - MolSurf
+  - MolEnergy (or GPUEnergy, but stick with MolEnergy unless you like cursing the compiler)
+  - F2Dock\_refactored
+  - PDB2PQR
+  - TMAlign
+  - SCWRL4
+  - PyMol
+  - OBabel
+
+In particular, you do not need MGLTools--any indication from the program that
+you do indicated that you probably compiled the wrong version or with the wrong
+flags.
